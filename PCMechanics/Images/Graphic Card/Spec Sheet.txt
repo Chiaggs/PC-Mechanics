@@ -1,0 +1,34 @@
+>gt 710
+	- 2GB DDR3 64bit
+	- 954 MHz
+	- PCIe 2.0
+	- 192 cores
+	- price : 3100
+
+>gt 730
+	-2GB DDR5 64bit
+	-902 MHz
+	-PCIe 2.0
+	-384 cores
+	-price : 5500
+	
+>gtx 1060
+	- 3GB GDDR5 192bit
+	- 1506 MHz
+	- PCIe 3.0
+	- 1152 cores
+	- price : 24000
+
+>gtx 1070
+	- 8GB GDDR5 256bit
+	- 1506 MHz
+	- PCIe 3.0
+	- 1920 cores
+	- price : 40,000
+
+>gtx 1080
+	- 8GB GDDR5 256bit
+	- 1607 MHz
+	- PCIe 3.0
+	- 2560 cores
+	- price : 75000

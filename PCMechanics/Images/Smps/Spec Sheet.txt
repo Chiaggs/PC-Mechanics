@@ -1,0 +1,6 @@
+-Corsair
+
+    -vs450
+    -vs550
+    -vs650
+    -cs750m

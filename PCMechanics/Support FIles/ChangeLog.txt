@@ -1,0 +1,11 @@
+>Selection 
++V 1.0
+	-prototype
++V 2.0
+	-UI redesign
+	-Navigation Panel Redesigned
++V 2.1
+	-Adding To cart UI Redesign
+
++V 2.2
+	-SpecSheet Added (Static)

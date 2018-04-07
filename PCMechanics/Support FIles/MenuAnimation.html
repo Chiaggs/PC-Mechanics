@@ -1,0 +1,111 @@
+<html>
+
+    <head>
+        <script src="Jquery/jquery-3.1.0.min.js"></script>
+    
+        <style>
+        
+            #container
+            {
+                width:500px;
+                height:500px;
+                background-color: brown;
+            }
+            
+            #menuBarTop
+            {
+                margin-top:85px;
+            }
+            #menuBarMiddle
+            {
+                margin-top:223px;
+                clear: left;
+            }
+            #menuBarBottom
+            {
+                margin-top:361px;
+                clear: left;
+            }
+            
+            .menuBar
+            {
+                width: 400px; height: 53px; margin-left: 50px; background-color: white; position: absolute; float: left;
+            }
+            
+            @keyframes starter
+            {
+                from{transform: rotate(0deg);}
+                to{transform: rotate(-45deg); margin-top: 226px;}
+            }
+            
+            @keyframes reverser
+            {
+                from{transform: rotate(-45deg);margin-top: 226px;}
+                to{transform: rotate(0deg); margin-top: 361px;}
+            }
+            
+            @keyframes starter2
+            {
+                from{transform: rotate(0deg);}
+                to{transform: rotate(45deg); margin-top: 226px;}
+            }
+            
+            @keyframes reverser2
+            {
+                from{transform: rotate(45deg);margin-top: 226px;}
+                to{transform: rotate(0deg); margin-top: 85px;}
+            }
+    
+        
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <div id="container" onclick="menuBar_animation();">
+        
+            <div id="menuBarTop" class="menuBar"></div>
+            <div id="menuBarMiddle" class="menuBar"></div>
+            <div id="menuBarBottom" class="menuBar"></div>
+        
+        </div>
+        
+        
+        <script>
+        
+        
+            var countMenu=true;
+            var menu_bottom_element=document.getElementById("menuBarBottom");
+            var menu_top_element=document.getElementById("menuBarTop");
+            function menuBar_animation()
+            {
+                if(countMenu)
+                {
+                    menu_bottom_element.style.animation='starter 1s';
+                    menu_top_element.style.animation='starter2 1s';
+                    menu_bottom_element.style.animationFillMode='forwards';
+                    menu_top_element.style.animationFillMode='forwards';
+                    $("#menuBarMiddle").animate({
+                        width: "0px",
+                    },750);
+                }
+                else
+                    {
+                        menu_bottom_element.style.animation='reverser 1s';
+                        menu_top_element.style.animation='reverser2 1s';
+                        menu_bottom_element.style.animationFillMode='forwards';
+                        menu_top_element.style.animationFillMode='forwards';
+                        $("#menuBarMiddle").animate({
+                        width: "400px",
+                    },750);
+                    }
+                countMenu=!countMenu;
+            }
+        
+        </script>
+    
+    
+    </body>
+
+</html>

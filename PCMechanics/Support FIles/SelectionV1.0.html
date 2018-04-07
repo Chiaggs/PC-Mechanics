@@ -1,0 +1,318 @@
+<html>
+
+    <head>
+        <title>Selection Prototype</title>
+        <script src="Jquery/jquery-3.1.0.min.js"></script>
+        <style>
+            
+            @font-face
+            {
+                font-family: windowsDefault;
+                src: url(fonts/ufonts.com_segoe-ui-light.ttf);
+            }
+            
+            body
+            {
+                margin: 0; background-color: white; border: 0; padding: 0; overflow-x: scroll; min-width: 1280px;
+            }
+        
+            .menuItem
+            {
+                font-family: windowsDefault; box-shadow: -5px 5px 5px #666666; position: absolute; background-color: white;line-height: 25px; vertical-align: middle;
+            }
+            .menuItemx
+            {
+                position: absolute;
+            }
+            #circle
+            {
+                width:200px; height: 35px; border-bottom-left-radius: 0px; right: 0px; z-index: 3; position: fixed;background: #66b2ff;
+            }
+            #indicator
+            {
+                width: 390px; height: 25px; right: 0px; z-index: 2; letter-spacing: 3px;font-size: 19px; color: #66b2ff; border-radius: 5px; padding-left: 10px; position: fixed;
+            }
+            #component
+            {
+                width: 140px; height: 25px; right: 380px; background: #66b2ff; z-index: 1; padding-left: 10px; border-radius: 25px; letter-spacing: 2px; position: fixed; color: white;
+            }
+            .selection
+            {
+                 width: 0px; height: 45px; background-color: white; z-index: 3; margin-top: 10px;
+                
+                 line-height: 45px; vertical-align: middle; text-align: center; font-family: windowsDefault; font-size: 25px; color: cadetblue;
+            }
+            #selector
+            {
+                right: 0; z-index: 4; display: none;top: 50px; position: fixed;
+            }
+            #contentTag
+            {
+                width: 400px; height: 100px; line-height: 100px; vertical-align: middle;font-family: windowsDefault; font-size: 50px; text-align: center; color: #66b2ff;
+            }
+            
+            
+            
+            .subTag
+            {
+                width: 200px; height: 50px;font-family: windowsDefault; font-size: 40px; line-height: 50px;
+                vertical-align: middle; text-align: center; color: #66b2ff;float: left;clear: left;
+            }
+            .contentWindow
+            {
+                width: 275px; height: 225px; background-color: cornsilk;margin-left: 80px; margin-top: 30px;float: left;
+            }
+            #contentWindow1, #contentWindow2, #contentWindow5, #contentWindow8
+            {
+                clear: left;
+            }
+            .nameTag
+            {
+                width: 275px; height: 50px; background-color: aliceblue; float: left; margin-left: 80px;margin-top: 5px;font-family: windowsDefault; font-size: 35px; line-height: 50px; vertical-align: middle; text-align: center; color: #66b2ff;
+            }
+            #nameTag1, #nameTag2, #nameTag5, #nameTag8
+            {
+                clear: left;
+            }
+            .ruler
+            {
+                margin-top: 30px;float: left; margin-left: 25%; border-color: #66b2ff;margin-bottom: 30px;clear: left;
+            }
+            
+            
+            
+            .selectionText
+            {
+                line-height: 45px; vertical-align: middle; text-align: center; font-family: windowsDefault; font-size: 25px; color: cadetblue;
+            }
+            
+            
+            
+            .buyTag
+            {
+                width: 50px; height: 50px; border-radius: 50px; background-color: coral; float: left; margin-left: 192px; margin-top: 10px; margin-right: 113px;
+            }
+            #buyTag1, #buyTag2, #buyTag5, #buyTag8
+            {
+                clear: left;
+            }
+            .buyTag img
+            {
+               margin-top: 7px; margin-left: 7px;
+            }
+            
+            
+            
+            #specSheet
+            {
+                width: 0px; height: 0px; position: fixed; border-radius: 0px; background-color: antiquewhite; left: 50%; top: 0px;
+            }
+        
+        </style>
+    
+    </head>
+
+    <body>
+        <div id="circle" class="menuItem" onclick="menu_press();"></div>
+        <div id="indicator" class="menuItem"><b> &lt;&lt; Essentials</b></div>
+        <div id="component" class="menuItem">Processor</div>
+        <div id="selector" class="menuItemx">
+            <div id="selection1" class="selection" >Processor</div>
+            <div id="selection2" class="selection">MotherBoard</div>
+            <div id="selection3" class="selection">RAM</div>
+            <div id="selection4" class="selection">SMPS</div>
+            <div id="selection5" class="selection">Graphic Card</div>
+            <div id="selection6" class="selection">HDD/SSD</div>
+        </div>
+        
+        <div id="contentTag"><strong>Processor</strong></div>
+        <hr/>
+        
+        <div id="pentiumTitle" class="subTag" >Pentium</div>
+        <div id="contentWindow1" class="contentWindow" onclick="specsheet_called();"><img src="Images/Processors/Pentium_G4400.jpg" width="100%" height="100%"/></div>
+        <div id="nameTag1" class="nameTag">G4400</div>
+        <div id="buyTag1" class="buyTag" onclick="buy_press(1);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <hr width="50%" class="ruler" />
+        
+        
+        <div id="i3Title" class="subTag">i3</div>
+        <div id="contentWindow2" class="contentWindow"><img src="Images/Processors/i3_common.jpg" width="100%" height="100%"/></div>
+        <div id="contentWindow3" class="contentWindow"><img src="Images/Processors/i3_common.jpg" width="100%" height="100%"/></div>
+        <div id="contentWindow4" class="contentWindow"><img src="Images/Processors/i3_common.jpg" width="100%" height="100%"/></div>
+        <div id="nameTag2" class="nameTag">6098P</div>
+        <div id="nameTag3" class="nameTag">6100</div>
+        <div id="nameTag4" class="nameTag">6300</div>
+        <div id="buyTag2" class="buyTag" onclick="buy_press(2);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <div id="buyTag3" class="buyTag" onclick="buy_press(3);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <div id="buyTag4" class="buyTag" onclick="buy_press(4);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <hr width="50%" class="ruler" />
+        
+        
+        <div id="i5Title" class="subTag">i5</div>
+        <div id="contentWindow5" class="contentWindow"><img src="Images/Processors/i5_6400.jpg" width="100%" height="100%"/></div>
+        <div id="contentWindow6" class="contentWindow"><img src="Images/Processors/i5_6500.jpg" width="100%" height="100%"/></div>
+        <div id="contentWindow7" class="contentWindow"><img src="Images/Processors/i5_6600.jpg" width="100%" height="100%"/></div>
+        <div id="nameTag5" class="nameTag">6400</div>
+        <div id="nameTag6" class="nameTag">6500</div>
+        <div id="nameTag7" class="nameTag">6600</div>
+        <div id="buyTag5" class="buyTag" onclick="buy_press(5);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <div id="buyTag6" class="buyTag" onclick="buy_press(6);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <div id="buyTag7" class="buyTag" onclick="buy_press(7);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <hr width="50%" class="ruler" />
+        
+        
+        <div id="i7title" class="subTag">i7</div>
+        <div id="contentWindow8" class="contentWindow"><img src="Images/Processors/i7_6700K.jpg" width="100%" height="100%"/></div>
+        <div id="nameTag8" class="nameTag">6700K</div>
+        <div id="buyTag8" class="buyTag" onclick="buy_press(8);"><image src="Images/UI/cart.png" width="75%" height="75%" /></div>
+        <hr width="50%" class="ruler" />
+        
+        
+        <div id="specSheet"></div>
+        
+        <script>
+        
+            var menu_anim_time=1000;
+            var menu_toggle=0;
+            
+            var buy_button;
+            var prev_button;
+            
+            function menu_press()
+            {
+                if(menu_toggle==0)
+                    {
+                    //------------------------------------
+                         $("#component").animate({
+                             right: "240px",
+    
+                        },menu_anim_time);
+        
+                
+                        $("#circle").animate({
+                            width: "200px",
+                            height: "400px",
+                            borderBottomLeftRadius: "10px",
+                    
+                        },menu_anim_time);
+                    //--------------------------------------
+                        setTimeout(
+                        
+                            function()
+                            {
+                           // $("#selector").css("display","block");
+                                $("#selector").slideDown(menu_anim_time);
+                                 $(".selection").animate({
+                                    width: "180px",
+                                    borderRadius: "5px",
+                                     marginRight: "10px",
+                            
+                        },menu_anim_time);
+                                
+                        },0);
+                        
+                        menu_toggle=1;
+                        return;
+                        
+                    }
+                if(menu_toggle==1)
+                    {
+                  //------------------------------------
+                         $("#component").animate({
+                             right: "380px",
+    
+                        },menu_anim_time);
+                 
+                
+                        $("#circle").animate({
+                            width: "80px",
+                            height: "80px",
+                            borderBottomLeftRadius: "80px"
+                    
+                        },menu_anim_time);
+                 //--------------------------------------
+                        menu_toggle=0;
+                        $("#selector").slideUp(menu_anim_time);
+                        $(".selection").animate({
+                            width: "0px",
+                            borderRadius: "0px",
+                            
+                        },menu_anim_time);
+                    }
+              
+                
+            }
+        
+            function buy_press(buy_button)
+            {
+                if(prev_button==buy_button)
+                   {
+                       $("#buyTag"+buy_button).css("backgroundColor","coral");
+                       prev_button = 0;
+                   } 
+                else
+                    {
+                        $("#buyTag"+prev_button).css("backgroundColor","coral");
+                        $("#buyTag"+buy_button).css("backgroundColor","green");
+                         prev_button=buy_button;
+                    }
+            }
+            
+            
+            function specsheet_called()
+            {
+                specSheet_initial_state();
+                $("#specSheet").animate({
+                    top: "175px",
+                    width: "150px",
+                    height: "150px",
+                    borderRadius: "150px",
+                    marginLeft: "-75px",
+                    
+                },500,"swing",function()
+                    {
+                        $("#specSheet").animate({
+                            top : "30px",
+                          /*  borderRadius: "200px",
+                            width: "200px",
+                            height: "200px",*/
+                            marginLeft: "-13px",
+                            height : "500px",
+                            borderRadius: "0px",
+                            width: "26px",
+                            
+                        },300,"swing");
+                        setTimeout(function()
+                                  {
+                                        $("#specSheet").animate({
+                                            width: "800px",
+                                            height: "500px",
+                                            marginLeft: "-400px",
+                                            //borderRadius: "500px",
+                                            borderTop: "0px",
+                                            //borderBottom: "500px",
+                                            top: "30px",
+                                            
+                                        },1300,"swing");
+                                   
+                            
+                                  },300);
+                     $("#specSheet").css("boxShadow","-2px 2px 2px #999999");
+                    
+                    }
+                );
+            }
+            
+            
+            function specSheet_initial_state()
+            {
+                $("#specSheet").css("width","0px").css("height","0px").css("top","0px").css("left","50%");
+            }
+            
+            
+        </script>
+        
+    
+    </body>
+
+</html>

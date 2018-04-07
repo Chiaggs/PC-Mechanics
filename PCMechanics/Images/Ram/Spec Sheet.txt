@@ -1,0 +1,12 @@
+-ddr4
+-2400Mhz
+-Corsair Vengeance
+
+4GB
+	-Price : 1700
+
+8GB
+	-Price : 3000
+
+16GB
+	-Price : 6400 (Single Chip)

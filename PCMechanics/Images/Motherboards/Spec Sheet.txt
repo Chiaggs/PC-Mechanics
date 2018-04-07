@@ -1,0 +1,18 @@
+-Socket LGA 1151
+-DDR4 Ram Support
+
+MSI H110M
+	-32GB Ram Max
+	-Price : 5600
+
+MSI B150M
+	-64GB Ram Max
+	-Price : 8500
+
+MSI B150A
+	-Max Ram 32GB 
+	-Price : 13300
+
+ASUS Z170 Pro Gaming
+	-Max Ram 64GB
+	-Price : 16,500

@@ -1,0 +1,77 @@
+-LGA 1151
+-SkyLake
+-6th Gen
+
+Pentium
+    G4400
+	-Dual Core
+	-3.3 Ghz
+	-3MB Cache L3 , 2x256kb L2
+	-65W
+	-HD Graphics 510
+	-Price : 4800
+
+
+i3
+    6098P
+	-Dual Core (4 threads)
+	-3.6 GHz
+	-3MB Cache
+	-54W
+	-hd gRAPHICS 510
+	-Price : 8200
+
+    6100
+	-Dual Core (4 Threads )
+	-3.7 Ghz
+	-3MB Cache
+	-51W
+	-HD Graphics 530
+	-Price : 9200
+
+    6300
+	-Dual Core (4 Threads)
+	-3.8 GHz
+	-4MB Cache
+	-47W
+	-HD Graphics 530
+	-Price : 14,000
+	-(Don't AutoSelect)	
+
+
+i5
+    6400
+	-Quad Core (4 Threads)
+	-2.7GHz (TB 3.3 GHz)
+	-6MB Cache
+	-64W
+	-HD Graphics 530
+	-Price : 14,000
+
+    6500
+	-Quad Core (4 Threads)
+	-3.2 GHz (TB 3.6 GHz)
+	-6MB Cache
+	-65W
+	-HD Graphics 530
+	-Price : 16,300
+
+    6600
+	-Quad Core (4 Threads)
+	-3.3 GHz (TB 3.9 GHz)
+	-6MB Cache
+	-65W
+	-HD Graphics 530
+	-Price : 17,300
+	-Unlocked
+
+
+i7
+    6700K
+	-Quad Core (8 Threads)
+	-4.0 GHz (TB 4.2 GHz)
+	-8MB Cache
+	-91W
+	-HD Graphics 530
+	-Price : 27,500
+	-Unlocked
